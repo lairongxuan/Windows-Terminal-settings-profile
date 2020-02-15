@@ -1,0 +1,200 @@
+
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    
+
+    
+    "globals": {       
+        "$schema": "https://aka.ms/terminal-profiles-schema",
+        "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}", //默认终端
+        "alwaysShowTabs": true, //始终显示标签
+        "initialCols": 100, //默认列数
+        "initialRows": 30, //默认行数
+        "keybindings": [//快捷键配置
+            {
+                "command": "closeTab",//快捷键执行的命令
+                "keys": [//快捷键
+                    "ctrl+w"
+                ]
+            }
+        ],
+        "requestedTheme": "system",//主题
+        "showTabsInTitlebar": true,//在标题栏中显示终端窗口标签栏	
+        "showTerminalTitleInTitlebar": true//在标签栏中显示终端标签
+    },
+    "profiles":
+    [
+        {
+            // Make changes here to the powershell.exe profile
+            "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+            "name": "Windows PowerShell",
+            "commandline": "powershell.exe",
+            "hidden": false,
+            "useAcrylic": true,//使用不透明度
+            "acrylicOpacity": 0.75,//不透明度
+            "closeOnExit": true,//退出后关闭
+            "colorScheme": "Campbell",
+            "cursorColor": "#FFFFFF",//光标颜色
+            // 光标类型，可选值 "vintage" ( ▃ ), "bar" ( ┃ ), 
+            // "underscore" ( ▁ ), "filledBox" ( █ ), "emptyBox" ( ▯ )
+            "cursorShape": "bar",
+            "fontFace": "Hack",//字体
+            "fontSize": 14,
+            "historySize": 9001,//历史大小
+            "padding": "0, 0, 0, 0",
+            "snapOnInput": true,//嗅探输入
+            "startingDirectory": "%Workspaces%"//初始目录
+            
+        },
+        {
+            // Make changes here to the cmd.exe profile
+            "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+            "name": "cmd",
+            "commandline": "cmd.exe",
+            "hidden": false,
+            "colorScheme":"UbuntuLegit",
+            "useAcrylic": true,//使用不透明度
+            "acrylicOpacity": 0.75,//不透明度
+            "closeOnExit": true,//退出后关闭
+            "cursorColor": "#FFFFFF",//光标颜色
+            // 光标类型，可选值 "vintage" ( ▃ ), "bar" ( ┃ ), 
+            // "underscore" ( ▁ ), "filledBox" ( █ ), "emptyBox" ( ▯ )
+            "cursorShape": "bar",
+            "fontFace": "Source Code Pro",//字体Hack
+            "fontSize": 13,
+            "historySize": 9001,//历史大小
+            "padding": "0, 0, 0, 0",
+            "snapOnInput": true,//嗅探输入
+            "startingDirectory": "%Workspaces%"//初始目录
+        },
+        {
+            "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+            "hidden": false,
+            "name": "Azure Cloud Shell",
+            "source": "Windows.Terminal.Azure"
+        }
+    ],
+
+    // Add custom color schemes to this array
+    "schemes": [
+    	{
+            "name": "Campbell",
+            "foreground": "#CCCCCC",
+            "background": "#0C0C0C",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cyan": "#3A96DD",
+            "green": "#13A10E",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
+        {
+        	"name": "UbuntuLegit",
+        	"foreground": "#EEEEEE",
+        	"background": "#2C001E",
+        	"colors": [
+        		"#4E9A06", "#CC0000", "#300A24", "#C4A000",
+        		"#3465A4", "#75507B", "#06989A", "#D3D7CF",
+        		"#555753", "#EF2929", "#8AE234", "#FCE94F",
+        		"#729FCF", "#AD7FA8", "#34E2E2", "#EEEEEE"
+        	]
+        },
+        {
+        	"name" : "One Half Dark",
+        	"foreground" : "#DCDFE4",
+        	"background" : "#282C34",
+            "black" : "#282C34",
+            "blue" : "#61AFEF",
+            "brightBlack" : "#5A6374",
+            "brightBlue" : "#61AFEF",
+            "brightCyan" : "#56B6C2",
+            "brightGreen" : "#98C379",
+            "brightPurple" : "#C678DD",
+            "brightRed" : "#E06C75",
+            "brightWhite" : "#DCDFE4",
+            "brightYellow" : "#E5C07B",
+            "cyan" : "#56B6C2",
+            "green" : "#98C379",
+            "purple" : "#C678DD",
+            "red" : "#E06C75",
+            "white" : "#DCDFE4",
+            "yellow" : "#E5C07B"
+        },
+        {
+        	"name": "Atom",
+        	"black": "#000000",
+        	"red": "#fd5ff1",
+        	"green": "#87c38a",
+        	"yellow": "#ffd7b1",
+        	"blue": "#85befd",
+        	"purple": "#b9b6fc",
+        	"cyan": "#85befd",
+        	"white": "#e0e0e0",
+        	"brightBlack": "#000000",
+        	"brightRed": "#fd5ff1",
+        	"brightGreen": "#94fa36",
+        	"brightYellow": "#f5ffa8",
+        	"brightBlue": "#96cbfe",
+        	"brightPurple": "#b9b6fc",
+        	"brightCyan": "#85befd",
+        	"brightWhite": "#e0e0e0",
+        	"background": "#161719",
+        	"foreground": "#c5c8c6"
+        }
+    ],
+
+    // Add any keybinding overrides to this array.
+    // To unbind a default keybinding, set the command to "unbound"
+    "keybindings": [
+    	{ "command" : "newTab", "keys" : ["ctrl+N"] },
+    	{ "command" : "closeTab", "keys" : ["ctrl+w"] },
+    	{ "command" : "closePane", "keys" : ["ctrl+w"]},
+        { "command" : "copy", "keys" : ["ctrl+c"]},
+        { "command" : "paste","keys" : ["ctrl+v"]},
+        { "command" : "find","keys" : ["ctrl+f"]},//搜索框
+        { "command" : "splitVertical", "keys": ["alt+-"]},//垂直方向分屏
+		{ "command" : "splitHorizontal", "keys": ["alt+="]},//水平方向分屏
+		{ "command" : "increaseFontSize", "keys": ["ctrl+]"]},//增大字体
+		{ "command" : "decreaseFontSize", "keys": ["ctrl+["]},//减小字体
+        { "command" : "duplicateTab", "keys" : ["ctrl+shift+d"]},
+        { "command" : "newTabProfile0","keys" : ["ctrl+shift+1"]},
+        { "command" : "newTabProfile1","keys" : ["ctrl+shift+2"]},
+        { "command" : "newTabProfile2","keys" : ["ctrl+shift+3"]},
+        { "command" : "newTabProfile3","keys" : ["ctrl+shift+4"]},
+        { "command" : "newTabProfile4", "keys" : ["ctrl+shift+5"]},
+        { "command" : "newTabProfile5","keys" : ["ctrl+shift+6"]},
+        { "command" : "newTabProfile6","keys" : ["ctrl+shift+7"]},
+        { "command" : "newTabProfile7","keys" : ["ctrl+shift+8"]},
+        { "command" : "newTabProfile8","keys" : ["ctrl+shift+9"]},        
+        { "command" : "openNewTabDropdown","keys" : ["ctrl+shift+space"]},
+        { "command" : "openSettings","keys" : ["ctrl+,"]},//打开配置文件
+        { "command" : "nextTab","keys" : ["ctrl+tab"]},//上一个tab
+        { "command" : "prevTab","keys" : ["ctrl+shift+tab"]},//下一个tab
+        { "command" : "scrollDown","keys" : ["ctrl+shift+down" ]},//向下滚动        
+        { "command" : "scrollUp","keys" : ["ctrl+shift+up"]},//向上滚动
+        { "command" : "scrollUpPage","keys" : ["pgup"]},//向上翻页
+        { "command" : "scrollDownPage","keys" : ["pgdn"]},//向下翻页
+        { "command" : "switchToTab0","keys" : ["ctrl+alt+1"]},
+        { "command" : "switchToTab1","keys" : ["ctrl+alt+2"]},
+        { "command" : "switchToTab2","keys" : ["ctrl+alt+3"]},
+        { "command" : "switchToTab3","keys" : ["ctrl+alt+4"]},
+        { "command" : "switchToTab4","keys" : ["ctrl+alt+5"]},
+        { "command" : "switchToTab5","keys" : ["ctrl+alt+6"]},
+        { "command" : "switchToTab6","keys" : ["ctrl+alt+7"]},
+        { "command" : "switchToTab7","keys" : ["ctrl+alt+8"]},
+        { "command" : "switchToTab8","keys" : ["ctrl+alt+9"]}
+    ]
+}
