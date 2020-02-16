@@ -1,26 +1,55 @@
-
 // To view the default settings, hold "alt" while clicking on the "Settings" button.
 // For documentation on these settings, see: https://aka.ms/terminal-documentation
 
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    
-
-    
     "globals": {       
         "$schema": "https://aka.ms/terminal-profiles-schema",
         "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}", //默认终端
         "alwaysShowTabs": true, //始终显示标签
         "initialCols": 100, //默认列数
         "initialRows": 30, //默认行数
-        "keybindings": [//快捷键配置
-            {
-                "command": "closeTab",//快捷键执行的命令
-                "keys": [//快捷键
-                    "ctrl+w"
-                ]
-            }
-        ],
+        // Add any keybinding overrides to this array.
+	    // To unbind a default keybinding, set the command to "unbound"
+	    "keybindings": [
+	    	{ "command" : "newTab", "keys" : ["ctrl+N"] },
+	    	{ "command" : "closeTab", "keys" : ["ctrl+w"] },
+	    	{ "command" : "closePane", "keys" : ["ctrl+w"]},
+	        { "command" : "copy", "keys" : ["ctrl+c"]},
+	        { "command" : "paste","keys" : ["ctrl+v"]},
+	        { "command" : "find","keys" : ["ctrl+f"]},//搜索框
+	        { "command" : "splitVertical", "keys": ["alt+-"]},//垂直方向分屏
+			{ "command" : "splitHorizontal", "keys": ["alt+="]},//水平方向分屏
+			{ "command" : "increaseFontSize", "keys": ["ctrl+]"]},//增大字体
+			{ "command" : "decreaseFontSize", "keys": ["ctrl+["]},//减小字体
+	        { "command" : "duplicateTab", "keys" : ["ctrl+shift+d"]},
+	        { "command" : "newTabProfile0","keys" : ["ctrl+shift+1"]},
+	        { "command" : "newTabProfile1","keys" : ["ctrl+shift+2"]},
+	        { "command" : "newTabProfile2","keys" : ["ctrl+shift+3"]},
+	        { "command" : "newTabProfile3","keys" : ["ctrl+shift+4"]},
+	        { "command" : "newTabProfile4", "keys" : ["ctrl+shift+5"]},
+	        { "command" : "newTabProfile5","keys" : ["ctrl+shift+6"]},
+	        { "command" : "newTabProfile6","keys" : ["ctrl+shift+7"]},
+	        { "command" : "newTabProfile7","keys" : ["ctrl+shift+8"]},
+	        { "command" : "newTabProfile8","keys" : ["ctrl+shift+9"]},        
+	        { "command" : "openNewTabDropdown","keys" : ["ctrl+shift+space"]},
+	        { "command" : "openSettings","keys" : ["ctrl+,"]},//打开配置文件
+	        { "command" : "nextTab","keys" : ["ctrl+tab"]},//上一个tab
+	        { "command" : "prevTab","keys" : ["ctrl+shift+tab"]},//下一个tab
+	        { "command" : "scrollDown","keys" : ["ctrl+shift+down" ]},//向下滚动        
+	        { "command" : "scrollUp","keys" : ["ctrl+shift+up"]},//向上滚动
+	        { "command" : "scrollUpPage","keys" : ["pgup"]},//向上翻页
+	        { "command" : "scrollDownPage","keys" : ["pgdn"]},//向下翻页
+	        { "command" : "switchToTab0","keys" : ["ctrl+alt+1"]},
+	        { "command" : "switchToTab1","keys" : ["ctrl+alt+2"]},
+	        { "command" : "switchToTab2","keys" : ["ctrl+alt+3"]},
+	        { "command" : "switchToTab3","keys" : ["ctrl+alt+4"]},
+	        { "command" : "switchToTab4","keys" : ["ctrl+alt+5"]},
+	        { "command" : "switchToTab5","keys" : ["ctrl+alt+6"]},
+	        { "command" : "switchToTab6","keys" : ["ctrl+alt+7"]},
+	        { "command" : "switchToTab7","keys" : ["ctrl+alt+8"]},
+	        { "command" : "switchToTab8","keys" : ["ctrl+alt+9"]}
+	    ],
         "requestedTheme": "system",//主题
         "showTabsInTitlebar": true,//在标题栏中显示终端窗口标签栏	
         "showTerminalTitleInTitlebar": true//在标签栏中显示终端标签
@@ -154,47 +183,5 @@
         	"background": "#161719",
         	"foreground": "#c5c8c6"
         }
-    ],
-
-    // Add any keybinding overrides to this array.
-    // To unbind a default keybinding, set the command to "unbound"
-    "keybindings": [
-    	{ "command" : "newTab", "keys" : ["ctrl+N"] },
-    	{ "command" : "closeTab", "keys" : ["ctrl+w"] },
-    	{ "command" : "closePane", "keys" : ["ctrl+w"]},
-        { "command" : "copy", "keys" : ["ctrl+c"]},
-        { "command" : "paste","keys" : ["ctrl+v"]},
-        { "command" : "find","keys" : ["ctrl+f"]},//搜索框
-        { "command" : "splitVertical", "keys": ["alt+-"]},//垂直方向分屏
-		{ "command" : "splitHorizontal", "keys": ["alt+="]},//水平方向分屏
-		{ "command" : "increaseFontSize", "keys": ["ctrl+]"]},//增大字体
-		{ "command" : "decreaseFontSize", "keys": ["ctrl+["]},//减小字体
-        { "command" : "duplicateTab", "keys" : ["ctrl+shift+d"]},
-        { "command" : "newTabProfile0","keys" : ["ctrl+shift+1"]},
-        { "command" : "newTabProfile1","keys" : ["ctrl+shift+2"]},
-        { "command" : "newTabProfile2","keys" : ["ctrl+shift+3"]},
-        { "command" : "newTabProfile3","keys" : ["ctrl+shift+4"]},
-        { "command" : "newTabProfile4", "keys" : ["ctrl+shift+5"]},
-        { "command" : "newTabProfile5","keys" : ["ctrl+shift+6"]},
-        { "command" : "newTabProfile6","keys" : ["ctrl+shift+7"]},
-        { "command" : "newTabProfile7","keys" : ["ctrl+shift+8"]},
-        { "command" : "newTabProfile8","keys" : ["ctrl+shift+9"]},        
-        { "command" : "openNewTabDropdown","keys" : ["ctrl+shift+space"]},
-        { "command" : "openSettings","keys" : ["ctrl+,"]},//打开配置文件
-        { "command" : "nextTab","keys" : ["ctrl+tab"]},//上一个tab
-        { "command" : "prevTab","keys" : ["ctrl+shift+tab"]},//下一个tab
-        { "command" : "scrollDown","keys" : ["ctrl+shift+down" ]},//向下滚动        
-        { "command" : "scrollUp","keys" : ["ctrl+shift+up"]},//向上滚动
-        { "command" : "scrollUpPage","keys" : ["pgup"]},//向上翻页
-        { "command" : "scrollDownPage","keys" : ["pgdn"]},//向下翻页
-        { "command" : "switchToTab0","keys" : ["ctrl+alt+1"]},
-        { "command" : "switchToTab1","keys" : ["ctrl+alt+2"]},
-        { "command" : "switchToTab2","keys" : ["ctrl+alt+3"]},
-        { "command" : "switchToTab3","keys" : ["ctrl+alt+4"]},
-        { "command" : "switchToTab4","keys" : ["ctrl+alt+5"]},
-        { "command" : "switchToTab5","keys" : ["ctrl+alt+6"]},
-        { "command" : "switchToTab6","keys" : ["ctrl+alt+7"]},
-        { "command" : "switchToTab7","keys" : ["ctrl+alt+8"]},
-        { "command" : "switchToTab8","keys" : ["ctrl+alt+9"]}
-    ]
+    ]    
 }
